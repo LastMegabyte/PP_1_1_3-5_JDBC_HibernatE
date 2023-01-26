@@ -6,10 +6,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Properties;
 
 public class Util {
@@ -18,19 +14,6 @@ public class Util {
     private static final String password = "root";
     private static final String driver = "com.mysql.cj.jdbc.Driver";
     private static SessionFactory sessionFactory;
-
-//    public static Connection getConnection() {
-//        Connection connection = null;
-//        try {
-//            Class.forName(driver);
-//            connection = DriverManager.getConnection(url, userName, password);
-//            System.out.println("Connection successful");
-//        } catch (SQLException | ClassNotFoundException e) {
-//            System.out.println("Connection aborted");
-//            e.printStackTrace();
-//        }
-//        return connection;
-//    }
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
