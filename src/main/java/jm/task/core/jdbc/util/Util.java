@@ -9,6 +9,8 @@ import org.hibernate.service.ServiceRegistry;
 import java.util.Properties;
 
 public class Util {
+    public Util(){
+    }
     private static final String url = "jdbc:mysql://localhost:3306/pp_1_1_3-4_hibernate[taskjdbc]";
     private static final String userName = "root";
     private static final String password = "root";
